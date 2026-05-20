@@ -1,0 +1,9 @@
+node_modules
+.git
+.env.local
+*.log
+.DS_Store
+historical_context.txt
+*.md
+docs
+.rules

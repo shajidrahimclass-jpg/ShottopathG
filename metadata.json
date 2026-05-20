@@ -1,0 +1,6 @@
+{
+  "name": "Shottopath E-Commerce",
+  "description": "A dynamic food and grocery e-commerce app with custom admin management, order tracking, and interactive cart controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
