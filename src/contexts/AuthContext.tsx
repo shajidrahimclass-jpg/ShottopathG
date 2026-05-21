@@ -98,7 +98,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
         setProfile(finalProfile);
       } else if (emailToCheck === 'shajidrahimclass@gmail.com') {
-        // Synthesize fallback admin profile if table does not exist or user doesn't have a profile row
+        // Synthesize fallback admin profile if database table doesn't have it or has issues
         setProfile({
           id: userId,
           email: 'shajidrahimclass@gmail.com',
