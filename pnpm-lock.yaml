@@ -139,7 +139,7 @@ importers:
         version: 2.0.6(@supabase/supabase-js@2.103.1)(react-dom@18.3.1(react@18.3.1))(react-router-dom@7.9.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       miaoda-sc-plugin:
         specifier: 1.0.61
-        version: 1.0.61(vite@5.4.19(@types/node@24.2.1)(lightningcss@1.30.1))
+        version: 1.0.61(vite@5.4.19(@types/node@24.2.1))
       motion:
         specifier: ^12.23.25
         version: 12.23.25(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -236,7 +236,7 @@ importers:
         version: 7.0.0-dev.20251103.1
       '@vitejs/plugin-react':
         specifier: ^4.3.4
-        version: 4.7.0(vite@5.4.19(@types/node@24.2.1)(lightningcss@1.30.1))
+        version: 4.7.0(vite@5.4.19(@types/node@24.2.1))
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.6)
@@ -251,10 +251,10 @@ importers:
         version: 5.9.3
       vite:
         specifier: ^5.1.4
-        version: 5.4.19(@types/node@24.2.1)(lightningcss@1.30.1)
+        version: 5.4.19(@types/node@24.2.1)
       vite-plugin-svgr:
         specifier: ^4.5.0
-        version: 4.5.0(rollup@4.46.2)(typescript@5.9.3)(vite@5.4.19(@types/node@24.2.1)(lightningcss@1.30.1))
+        version: 4.5.0(rollup@4.46.2)(typescript@5.9.3)(vite@5.4.19(@types/node@24.2.1))
 
 packages:
 
@@ -1684,6 +1684,7 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   '@use-gesture/core@10.3.1':
     resolution: {integrity: sha512-WcINiDt8WjqBdUXye25anHiNxPc0VOrlT8F6LLkU6cycrOGUDyY/yyFmsg3k8i5OLvv25llc0QC45GhR/C8llw==}
@@ -2139,10 +2140,6 @@ packages:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
 
-  detect-libc@2.0.4:
-    resolution: {integrity: sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==}
-    engines: {node: '>=8'}
-
   detect-node-es@1.1.0:
     resolution: {integrity: sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==}
 
@@ -2355,6 +2352,7 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   globals@15.15.0:
@@ -2552,74 +2550,6 @@ packages:
 
   layout-base@2.0.1:
     resolution: {integrity: sha512-dp3s92+uNI1hWIpPGH3jK2kxE2lMjdXdr+DH8ynZHpd6PUlH6x6cbuXnoMmiNumznqaNO31xu9e79F0uuZ0JFg==}
-
-  lightningcss-darwin-arm64@1.30.1:
-    resolution: {integrity: sha512-c8JK7hyE65X1MHMN+Viq9n11RRC7hgin3HhYKhrMyaXflk5GVplZ60IxyoVtzILeKr+xAJwg6zK6sjTBJ0FKYQ==}
-    engines: {node: '>= 12.0.0'}
-    cpu: [arm64]
-    os: [darwin]
-
-  lightningcss-darwin-x64@1.30.1:
-    resolution: {integrity: sha512-k1EvjakfumAQoTfcXUcHQZhSpLlkAuEkdMBsI/ivWw9hL+7FtilQc0Cy3hrx0AAQrVtQAbMI7YjCgYgvn37PzA==}
-    engines: {node: '>= 12.0.0'}
-    cpu: [x64]
-    os: [darwin]
-
-  lightningcss-freebsd-x64@1.30.1:
-    resolution: {integrity: sha512-kmW6UGCGg2PcyUE59K5r0kWfKPAVy4SltVeut+umLCFoJ53RdCUWxcRDzO1eTaxf/7Q2H7LTquFHPL5R+Gjyig==}
-    engines: {node: '>= 12.0.0'}
-    cpu: [x64]
-    os: [freebsd]
-
-  lightningcss-linux-arm-gnueabihf@1.30.1:
-    resolution: {integrity: sha512-MjxUShl1v8pit+6D/zSPq9S9dQ2NPFSQwGvxBCYaBYLPlCWuPh9/t1MRS8iUaR8i+a6w7aps+B4N0S1TYP/R+Q==}
-    engines: {node: '>= 12.0.0'}
-    cpu: [arm]
-    os: [linux]
-
-  lightningcss-linux-arm64-gnu@1.30.1:
-    resolution: {integrity: sha512-gB72maP8rmrKsnKYy8XUuXi/4OctJiuQjcuqWNlJQ6jZiWqtPvqFziskH3hnajfvKB27ynbVCucKSm2rkQp4Bw==}
-    engines: {node: '>= 12.0.0'}
-    cpu: [arm64]
-    os: [linux]
-    libc: [glibc]
-
-  lightningcss-linux-arm64-musl@1.30.1:
-    resolution: {integrity: sha512-jmUQVx4331m6LIX+0wUhBbmMX7TCfjF5FoOH6SD1CttzuYlGNVpA7QnrmLxrsub43ClTINfGSYyHe2HWeLl5CQ==}
-    engines: {node: '>= 12.0.0'}
-    cpu: [arm64]
-    os: [linux]
-    libc: [musl]
-
-  lightningcss-linux-x64-gnu@1.30.1:
-    resolution: {integrity: sha512-piWx3z4wN8J8z3+O5kO74+yr6ze/dKmPnI7vLqfSqI8bccaTGY5xiSGVIJBDd5K5BHlvVLpUB3S2YCfelyJ1bw==}
-    engines: {node: '>= 12.0.0'}
-    cpu: [x64]
-    os: [linux]
-    libc: [glibc]
-
-  lightningcss-linux-x64-musl@1.30.1:
-    resolution: {integrity: sha512-rRomAK7eIkL+tHY0YPxbc5Dra2gXlI63HL+v1Pdi1a3sC+tJTcFrHX+E86sulgAXeI7rSzDYhPSeHHjqFhqfeQ==}
-    engines: {node: '>= 12.0.0'}
-    cpu: [x64]
-    os: [linux]
-    libc: [musl]
-
-  lightningcss-win32-arm64-msvc@1.30.1:
-    resolution: {integrity: sha512-mSL4rqPi4iXq5YVqzSsJgMVFENoa4nGTT/GjO2c0Yl9OuQfPsIfncvLrEW6RbbB24WtZ3xP/2CCmI3tNkNV4oA==}
-    engines: {node: '>= 12.0.0'}
-    cpu: [arm64]
-    os: [win32]
-
-  lightningcss-win32-x64-msvc@1.30.1:
-    resolution: {integrity: sha512-PVqXh48wh4T53F/1CCu8PIPCxLzWyCnn/9T5W1Jpmdy5h9Cwd+0YQS6/LwhHXSafuc61/xg9Lv5OrCby6a++jg==}
-    engines: {node: '>= 12.0.0'}
-    cpu: [x64]
-    os: [win32]
-
-  lightningcss@1.30.1:
-    resolution: {integrity: sha512-xi6IyHML+c9+Q3W0S4fCQJOym42pyurFiJUHEcEyHS0CeKzia4yZDEsLlqOFykxOdHpNy0NmvVO31vcSqAxJCg==}
-    engines: {node: '>= 12.0.0'}
 
   lilconfig@3.1.3:
     resolution: {integrity: sha512-/vlFKAoH5Cgt3Ie+JLhRbwOsCQePABiU3tJ1egGvyQ+33R/vcwM2Zl2QR/LzjsBeItPt3oSVXapn+m4nQDvpzw==}
@@ -5111,7 +5041,7 @@ snapshots:
     optionalDependencies:
       react: 18.3.1
 
-  '@vitejs/plugin-react@4.7.0(vite@5.4.19(@types/node@24.2.1)(lightningcss@1.30.1))':
+  '@vitejs/plugin-react@4.7.0(vite@5.4.19(@types/node@24.2.1))':
     dependencies:
       '@babel/core': 7.28.0
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.0)
@@ -5119,7 +5049,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.27
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 5.4.19(@types/node@24.2.1)(lightningcss@1.30.1)
+      vite: 5.4.19(@types/node@24.2.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -5538,9 +5468,6 @@ snapshots:
   delayed-stream@1.0.0: {}
 
   dequal@2.0.3: {}
-
-  detect-libc@2.0.4:
-    optional: true
 
   detect-node-es@1.1.0: {}
 
@@ -6003,52 +5930,6 @@ snapshots:
 
   layout-base@2.0.1: {}
 
-  lightningcss-darwin-arm64@1.30.1:
-    optional: true
-
-  lightningcss-darwin-x64@1.30.1:
-    optional: true
-
-  lightningcss-freebsd-x64@1.30.1:
-    optional: true
-
-  lightningcss-linux-arm-gnueabihf@1.30.1:
-    optional: true
-
-  lightningcss-linux-arm64-gnu@1.30.1:
-    optional: true
-
-  lightningcss-linux-arm64-musl@1.30.1:
-    optional: true
-
-  lightningcss-linux-x64-gnu@1.30.1:
-    optional: true
-
-  lightningcss-linux-x64-musl@1.30.1:
-    optional: true
-
-  lightningcss-win32-arm64-msvc@1.30.1:
-    optional: true
-
-  lightningcss-win32-x64-msvc@1.30.1:
-    optional: true
-
-  lightningcss@1.30.1:
-    dependencies:
-      detect-libc: 2.0.4
-    optionalDependencies:
-      lightningcss-darwin-arm64: 1.30.1
-      lightningcss-darwin-x64: 1.30.1
-      lightningcss-freebsd-x64: 1.30.1
-      lightningcss-linux-arm-gnueabihf: 1.30.1
-      lightningcss-linux-arm64-gnu: 1.30.1
-      lightningcss-linux-arm64-musl: 1.30.1
-      lightningcss-linux-x64-gnu: 1.30.1
-      lightningcss-linux-x64-musl: 1.30.1
-      lightningcss-win32-arm64-msvc: 1.30.1
-      lightningcss-win32-x64-msvc: 1.30.1
-    optional: true
-
   lilconfig@3.1.3: {}
 
   lines-and-columns@1.2.4: {}
@@ -6302,13 +6183,13 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       react-router-dom: 7.9.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
-  miaoda-sc-plugin@1.0.61(vite@5.4.19(@types/node@24.2.1)(lightningcss@1.30.1)):
+  miaoda-sc-plugin@1.0.61(vite@5.4.19(@types/node@24.2.1)):
     dependencies:
       '@babel/parser': 7.28.0
       '@babel/traverse': 7.28.0
       magic-string: 0.30.17
       recast: 0.23.11
-      vite: 5.4.19(@types/node@24.2.1)(lightningcss@1.30.1)
+      vite: 5.4.19(@types/node@24.2.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -7348,18 +7229,18 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       redux: 4.2.1
 
-  vite-plugin-svgr@4.5.0(rollup@4.46.2)(typescript@5.9.3)(vite@5.4.19(@types/node@24.2.1)(lightningcss@1.30.1)):
+  vite-plugin-svgr@4.5.0(rollup@4.46.2)(typescript@5.9.3)(vite@5.4.19(@types/node@24.2.1)):
     dependencies:
       '@rollup/pluginutils': 5.2.0(rollup@4.46.2)
       '@svgr/core': 8.1.0(typescript@5.9.3)
       '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0(typescript@5.9.3))
-      vite: 5.4.19(@types/node@24.2.1)(lightningcss@1.30.1)
+      vite: 5.4.19(@types/node@24.2.1)
     transitivePeerDependencies:
       - rollup
       - supports-color
       - typescript
 
-  vite@5.4.19(@types/node@24.2.1)(lightningcss@1.30.1):
+  vite@5.4.19(@types/node@24.2.1):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.6
@@ -7367,7 +7248,6 @@ snapshots:
     optionalDependencies:
       '@types/node': 24.2.1
       fsevents: 2.3.3
-      lightningcss: 1.30.1
 
   vscode-jsonrpc@8.2.0: {}
 
