@@ -160,6 +160,16 @@ INSERT INTO gift_card_templates (name, occasion, subject_line, header_text, gree
 CREATE INDEX IF NOT EXISTS idx_gift_card_templates_occasion ON gift_card_templates(occasion);
 CREATE INDEX IF NOT EXISTS idx_gift_card_templates_active ON gift_card_templates(is_active);
 
+-- Enable RLS and add security policies
+ALTER TABLE gift_card_templates ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Anyone can view gift card templates" ON gift_card_templates
+  FOR SELECT TO public USING (true);
+
+CREATE POLICY "Admins can manage gift card templates" ON gift_card_templates
+  FOR ALL TO authenticated USING (is_admin(auth.uid())) WITH CHECK (is_admin(auth.uid()));
+
+
 -- Migration 75: add_force_sign_in_to_app_settings
 ALTER TABLE app_settings ADD COLUMN IF NOT EXISTS force_sign_in boolean NOT NULL DEFAULT true;
 UPDATE app_settings SET force_sign_in = true WHERE force_sign_in IS NULL;
