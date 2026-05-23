@@ -1102,13 +1102,24 @@ export const getCategories = async (): Promise<Category[]> => {
 };
 
 export const getAllCategories = async (): Promise<Category[]> => {
-  const { data, error } = await supabase
-    .from('categories')
-    .select('*')
-    .order('name', { ascending: true });
-  
-  if (error) throw error;
-  return Array.isArray(data) ? data : [];
+  try {
+    const { data, error } = await supabase
+      .from('categories')
+      .select('*')
+      .order('name', { ascending: true });
+    
+    if (error) {
+      if (error.message?.includes('relation') && error.message?.includes('does not exist')) {
+        console.error('Database relation not set up.');
+        return [];
+      }
+      throw error;
+    }
+    return Array.isArray(data) ? data : [];
+  } catch (error) {
+    console.error('Error in getAllCategories:', error);
+    return [];
+  }
 };
 
 export const createCategory = async (category: Omit<Category, 'id' | 'created_at'>): Promise<Category> => {

@@ -21,7 +21,7 @@ export function InvoiceDialog({ open, onOpenChange, order }: InvoiceDialogProps)
   const invoiceRef = useRef<HTMLDivElement>(null);
 
   const handlePrint = useReactToPrint({
-    contentRef: invoiceRef,
+    content: () => invoiceRef.current,
     documentTitle: `Invoice-${order.id}`,
   });
 
